@@ -1,25 +1,44 @@
 #include <raylib.h>
-#include "ball.h"
+
+enum Screen { MENU, GAME };
+
+void displayMenu();
+void displayGrid();
+// void displayButton();()
 
 int main()
 {
-    Color darkGreen = Color{20, 160, 133, 255};
-
     const int screenWidth = 800;
     const int screenHeight = 600;
 
-    Ball ball = Ball();
-
-    InitWindow(screenWidth, screenHeight, "My first RAYLIB program!");
+    InitWindow(screenWidth, screenHeight, "Le jeu de la vie!");
     SetTargetFPS(60);
+
+    Screen currentScreen = MENU;
 
     while (!WindowShouldClose())
     {
-        BeginDrawing();
-        ClearBackground(darkGreen);
-        ball.Update();
-        ball.Draw();
-        EndDrawing();
+        if (currentScreen == MENU)
+        {
+            displayMenu();
+        }
+        else if (currentScreen == GAME)
+        {
+            displayGrid();
+            // displayButton();
+        }
+
+        if (IsKeyPressed(KEY_ENTER))
+        {
+            if (currentScreen == MENU)
+            {
+                currentScreen = GAME;
+            }
+            else if (currentScreen == GAME)
+            {
+                break;
+            }
+        }
     }
 
     CloseWindow();
