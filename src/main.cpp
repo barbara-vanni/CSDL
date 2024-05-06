@@ -4,8 +4,8 @@
 enum Screen { MENU, GAME };
 
 void displayMenu();
-void displayGrid();
-// void displayButton();()
+void displayGame();
+
 
 int main()
 {
@@ -25,8 +25,7 @@ int main()
         }
         else if (currentScreen == GAME)
         {
-            displayGrid();
-            // displayButton();
+            displayGame();
         }
 
         if (IsKeyPressed(KEY_ENTER))
