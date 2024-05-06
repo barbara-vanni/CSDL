@@ -1,44 +1,24 @@
-#include <raylib.h>
-// #include "readFile.cpp"
-
-enum Screen { MENU, GAME };
-
-void displayMenu();
-void displayGame();
-
+// main.cpp
+#include "raylib.h"
+#include "grid.h" // Inclure le fichier d'en-tête correspondant
 
 int main()
 {
     const int screenWidth = 800;
-    const int screenHeight = 600;
+    const int screenHeight = 800;
 
-    InitWindow(screenWidth, screenHeight, "Le jeu de la vie!");
+    InitWindow(screenWidth, screenHeight, "Affichage de la matrice dans le terminal");
     SetTargetFPS(60);
-
-    Screen currentScreen = MENU;
 
     while (!WindowShouldClose())
     {
-        if (currentScreen == MENU)
-        {
-            displayMenu();
-        }
-        else if (currentScreen == GAME)
-        {
-            displayGame();
-        }
+        BeginDrawing();
 
-        if (IsKeyPressed(KEY_ENTER))
-        {
-            if (currentScreen == MENU)
-            {
-                currentScreen = GAME;
-            }
-            else if (currentScreen == GAME)
-            {
-                break;
-            }
-        }
+        ClearBackground(BLACK);
+
+        drawGrid();
+
+        EndDrawing();
     }
 
     CloseWindow();

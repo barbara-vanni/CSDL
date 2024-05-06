@@ -1,40 +1,40 @@
-//grid.cpp
-
+// grid.cpp
 #include "raylib.h"
+#include "grid.h"
+#include <iostream>
 
-// void displayGrid()
-// {
-//     ClearBackground(BLACK);
+// Définition des variables
+std::vector<std::vector<int>> matrix;
 
-//     // Dessiner la grille
-//     for (int i = 0; i < 800; i += 20)
-//     {
-//         DrawLine(i, 0, i, 400, GRAY);
-//     }
+// Définition des fonctions
+void drawCell(int x, int y, const std::vector<std::vector<int>>& matrix)
+{
+    int cellSize = 20;
+    if (matrix[y / cellSize][x / cellSize] == 1)
+    {
+        DrawRectangle(x, y, cellSize, cellSize, WHITE);
+    }
+}
 
-//     for (int i = 0; i <400; i += 20)
-//     {
-//         DrawLine(0, i, 800, i, GRAY);
-//     }
-
-//     // Dessiner les boutons
-//     // for (int i = 0; i < 800; i += 400)
-//     // {
-//     //     DrawLine(i, 400, i, 800, GRAY);
-//     // }
-
-//     // for (int i = 400; i <800; i += 70)
-//     // {
-//     //     DrawLine(0, i, 800, i, GRAY);
-//     // }
-
-//     EndDrawing();
-// }
 void drawGrid()
 {
-    for (int i = 0; i < 800; i += 20)
+
+    const int gridSize = static_cast<int>(matrix.size());
+    const int cellSize = 20;
+
+    for (std::vector<std::vector<int>>::size_type i = 0; i < gridSize; ++i)
     {
-        DrawLine(i, 0, i, 800, GRAY);
-        DrawLine(0, i, 800, i, GRAY);
+        for (std::vector<int>::size_type j = 0; j < gridSize; ++j)
+        {
+            int x = static_cast<int>(j * cellSize);
+            int y = static_cast<int>(i * cellSize);
+            drawCell(x, y, matrix);
+        }
+    }
+
+    for (std::vector<std::vector<int>>::size_type i = 0; i <= gridSize; ++i)
+    {
+        DrawLine(static_cast<int>(i * cellSize), 0, static_cast<int>(i * cellSize), static_cast<int>(gridSize * cellSize), GRAY);
+        DrawLine(0, static_cast<int>(i * cellSize), static_cast<int>(gridSize * cellSize), static_cast<int>(i * cellSize), GRAY);
     }
 }
