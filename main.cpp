@@ -1,9 +1,10 @@
 #include <iostream>
-#include "readFile.hpp"
+#include <raylib.h>
+// #include "readFile.hpp"
 
-using namespace std;
+// using namespace std;
 
-int main() {
-    int matrice = readMatrice();
-    return 0;
-}
+// int main() {
+//     int matrice = readMatrice();
+//     return 0;
+// }

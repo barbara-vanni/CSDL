@@ -5,13 +5,13 @@
 
 using namespace std;
 
-int readMatrice() {
+std::vector<std::vector<int>> readMatrice() {
     // Ouvrir le fichier en lecture
     ifstream inputFile("board.txt");
 
     if (!inputFile.is_open()) {
         cout << "Erreur lors de l'ouverture du fichier." << endl;
-        return 1;
+        return {};
     }
 
     string line;
@@ -21,7 +21,7 @@ int readMatrice() {
     while (getline(inputFile, line)) {
         vector<int> row; // Pour stocker une ligne de la matrice
 
-        // Utiliser un stringstream pour séparer les valeurs
+        // Utiliser un stringstream pour séparer les valeurs de la ligne
         stringstream ss(line);
         char ch;
 
@@ -52,5 +52,5 @@ int readMatrice() {
         cout << endl;
     }
 
-    return 0;
+    return matrix;
 }
