@@ -30,6 +30,6 @@ void drawGrid(const std::vector<std::vector<int>>& matrix)
 
 void drawCell(int x, int y, int value)
 {
-    Color color = (value == 1) ? RED : BLACK;
+    Color color = (value == 1) ? RED : WHITE;
     DrawRectangle(x, y, 19, 19, color);
 }
