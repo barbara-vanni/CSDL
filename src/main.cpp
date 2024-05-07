@@ -1,10 +1,10 @@
 #include <raylib.h>
-
+#include "selectGame.hpp"
+// #include "game.hpp"
+#include "menu.hpp"
 enum Screen { MENU, GAME };
 
-void displayMenu();
-// void displayGame();
-void displaySelectGame();
+
 
 
 int main()

@@ -1,7 +1,7 @@
 #include "raylib.h"
+#include "game.hpp"
 #include <iostream>
 
-void displayGame();
 
 void displaySelectGame()
 {

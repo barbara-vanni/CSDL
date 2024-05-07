@@ -5,12 +5,13 @@
 #include <ctime> 
 #include <fstream>
 #include <sstream>
+#include "grid.hpp"
+#include "button.hpp"
+#include "alive.hpp"
+
 
 extern std::vector<std::vector<int>> matrix;
 
-int alive(const std::vector<std::vector<int>>& matrix, int row, int col);
-void drawButtons();
-void drawGrid(const std::vector<std::vector<int>>& matrix);
 
 std::vector<std::vector<int>> readMatrixFromFile(const std::string& filename)
 {

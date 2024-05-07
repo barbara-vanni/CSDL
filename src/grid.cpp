@@ -4,7 +4,15 @@
 #include <cstdlib> 
 #include <ctime> 
 
-void drawCell(int x, int y, int value);
+
+
+void drawCell(int x, int y, int value)
+{
+    Color color_off_white = {245, 245, 220, 255};
+    Color color_red_japon = {206, 43, 55, 255};
+    Color color = (value == 1) ? color_red_japon : color_off_white;
+    DrawRectangle(x, y, 19, 19, color);
+}
 
 void drawGrid(const std::vector<std::vector<int>>& matrix)
 {
@@ -23,10 +31,3 @@ void drawGrid(const std::vector<std::vector<int>>& matrix)
     }
 }
 
-void drawCell(int x, int y, int value)
-{
-    Color color_off_white = {245, 245, 220, 255};
-    Color color_red_japon = {206, 43, 55, 255};
-    Color color = (value == 1) ? color_red_japon : color_off_white;
-    DrawRectangle(x, y, 19, 19, color);
-}
