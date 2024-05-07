@@ -44,24 +44,19 @@ std::vector<std::vector<int>> readMatrixFromFile(const std::string& filename)
 void updateMatrix(std::vector<std::vector<int>>& matrix)
 {
     
-    // Créer une copie de la matrice pour stocker les mises à jour
     std::vector<std::vector<int>> newMatrix = matrix;
 
 
-    // Parcourir chaque cellule de la matrice
     for (int i = 0; i < matrix.size(); ++i)
     {
         for (int j = 0; j < matrix[i].size(); ++j)
         {
-            // Compter le nombre de voisins vivants
             int livingNeighbors = alive(matrix, i, j);
 
-            // Appliquer les règles du jeu de la vie
             if (matrix[i][j] == 1)
             {
                 if (livingNeighbors < 2 || livingNeighbors > 3)
                 {
-                    // Toute cellule vivante avec moins de 2 ou plus de 3 voisins vivants meurt
                     newMatrix[i][j] = 0;
                 }
             }
@@ -69,36 +64,28 @@ void updateMatrix(std::vector<std::vector<int>>& matrix)
             {
                 if (livingNeighbors == 3)
                 {
-                    // Toute cellule morte avec exactement 3 voisins vivants devient vivante
                     newMatrix[i][j] = 1;
                 }
             }
         }
     }
 
-    // Mettre à jour la matrice originale avec les mises à jour
     matrix = newMatrix;
 }
 
-
-
-
 void displayGame()
 {
-    // Lire le fichier et créer la matrice une seule fois avant la boucle
     std::vector<std::vector<int>> matrix = readMatrixFromFile("src/matrix.txt");
 
-    while (true) // Boucle infinie
+    while (true) 
     {
         if (WindowShouldClose())
         {
-            break; // Sortir de la boucle si la fenêtre est fermée
+            break;
         }
 
-        // Mettre à jour la matrice avant de dessiner la grille
         updateMatrix(matrix);
 
-        // Mettre à jour la matrice avant de dessiner la grille
         updateMatrix(matrix);
 
         BeginDrawing();

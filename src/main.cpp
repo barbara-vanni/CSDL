@@ -13,7 +13,7 @@ int main()
     const int screenHeight = 1000;
 
     InitWindow(screenWidth, screenHeight, "Le jeu de la vie!");
-    SetTargetFPS(60);
+    SetTargetFPS(20);
 
     Screen currentScreen = MENU;
 
