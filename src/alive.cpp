@@ -1,12 +1,10 @@
 #include <vector>
 
-// Fonction pour compter les voisins vivants d'une cellule dans la matrice
 int alive(const std::vector<std::vector<int>>& matrix, int row, int col) {
     int count = 0;
     int numRows = matrix.size();
     int numCols = matrix[0].size();
 
-    // Parcours des cellules voisines dans un carré 3x3 autour de la cellule actuelle
     for (int i = -1; i <= 1; ++i) {
         for (int j = -1; j <= 1; ++j) {
             // Exclure la cellule actuelle
