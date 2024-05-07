@@ -85,7 +85,9 @@ void updateMatrix(std::vector<std::vector<int>>& matrix)
 
 void displayGame()
 {
-    // int iterations = 0;
+    // Lire le fichier et créer la matrice une seule fois avant la boucle
+    std::vector<std::vector<int>> matrix = readMatrixFromFile("src/matrix.txt");
+
     while (true) // Boucle infinie
     {
         if (WindowShouldClose())
@@ -93,25 +95,21 @@ void displayGame()
             break; // Sortir de la boucle si la fenêtre est fermée
         }
 
+        // Mettre à jour la matrice avant de dessiner la grille
+        updateMatrix(matrix);
+
         BeginDrawing();
 
         ClearBackground(BLACK);
 
-        std::vector<std::vector<int>> matrix = readMatrixFromFile("src/matrix.txt");
-        // std::cout << "Iteration: " << iterations << std::endl;
-        // iterations++; 
-
-        // Mettre à jour la matrice avec les nouvelles données
-        updateMatrix(matrix);
-
-        BeginScissorMode(0, 0, GetScreenWidth(), 400);
+        BeginScissorMode(0, 0, GetScreenWidth(), 800);
         drawGrid(matrix);
         EndScissorMode();
 
-        BeginScissorMode(0, 400, GetScreenWidth(), GetScreenHeight() - 400);
+        BeginScissorMode(0, 800, GetScreenWidth(), GetScreenHeight() - 200);
         drawButtons();
         EndScissorMode();
 
-        EndDrawing();
+        EndDrawing(); 
     }
 }

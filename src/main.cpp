@@ -8,11 +8,11 @@ void displayGame();
 
 int main()
 {
-    const int screenWidth = 800;
-    const int screenHeight = 600;
+    const int screenWidth = 1200;
+    const int screenHeight = 1000;
 
     InitWindow(screenWidth, screenHeight, "Le jeu de la vie!");
-    SetTargetFPS(60);
+    SetTargetFPS(10);
 
     Screen currentScreen = MENU;
 
