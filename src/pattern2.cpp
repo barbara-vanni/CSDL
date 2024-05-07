@@ -13,7 +13,7 @@
 extern std::vector<std::vector<int>> matrix;
 
 
-std::vector<std::vector<int>> readMatrixRandomFile(const std::string& filename)
+std::vector<std::vector<int>> readMatrixPattern2FromFile(const std::string& filename)
 {
     std::ifstream file(filename);
     std::vector<std::vector<int>> matrix;
@@ -42,35 +42,7 @@ std::vector<std::vector<int>> readMatrixRandomFile(const std::string& filename)
     return matrix;
 }
 
-void randomMatrix(std::vector<std::vector<int>>& matrix, int maxOnes)
-{
-    srand(time(0));
-
-    int countOnes = 0; 
-
-    for (int i = 0; i < matrix.size(); ++i)
-    {
-        for (int j = 0; j < matrix[i].size(); ++j)
-        {
-            if (countOnes < maxOnes)
-            {
-                matrix[i][j] = rand() % 2;
-                if (matrix[i][j] == 1)
-                {
-                    ++countOnes;  
-                }
-            }
-            else
-            {
-                matrix[i][j] = 0;  
-            }
-        }
-    }
-}
-
-
-
-void updateMatrixRandom(std::vector<std::vector<int>>& matrix)
+void updateMatrixPattern2(std::vector<std::vector<int>>& matrix)
 {
     
     std::vector<std::vector<int>> newMatrix = matrix;
@@ -102,11 +74,9 @@ void updateMatrixRandom(std::vector<std::vector<int>>& matrix)
     matrix = newMatrix;
 }
 
-
-void displayRandomGame()
+void displayGamePattern2()
 {
-    std::vector<std::vector<int>> matrix = readMatrixRandomFile("src/txt_file/matrix_vierge.txt");
-    randomMatrix(matrix, 2600);
+    std::vector<std::vector<int>> matrix = readMatrixPattern2FromFile("src/txt_file/rabbits.txt");
 
     while (true) 
     {
@@ -115,7 +85,9 @@ void displayRandomGame()
             break;
         }
 
-        updateMatrixRandom(matrix);
+        updateMatrixPattern2(matrix);
+
+        updateMatrixPattern2(matrix);
 
         BeginDrawing();
 

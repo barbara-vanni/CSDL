@@ -5,15 +5,15 @@
 #include <ctime> 
 #include <fstream>
 #include <sstream>
-#include "grid.hpp"
-#include "button.hpp"
-#include "alive.hpp"
+#include "hpp_file/grid.hpp"
+#include "hpp_file/button.hpp"
+#include "hpp_file/alive.hpp"
 
 
 extern std::vector<std::vector<int>> matrix;
 
 
-std::vector<std::vector<int>> readMatrix1FromFile(const std::string& filename)
+std::vector<std::vector<int>> readMatrixPattern1FromFile(const std::string& filename)
 {
     std::ifstream file(filename);
     std::vector<std::vector<int>> matrix;
@@ -42,7 +42,7 @@ std::vector<std::vector<int>> readMatrix1FromFile(const std::string& filename)
     return matrix;
 }
 
-void updateMatrix1(std::vector<std::vector<int>>& matrix)
+void updateMatrixPattern1(std::vector<std::vector<int>>& matrix)
 {
     
     std::vector<std::vector<int>> newMatrix = matrix;
@@ -76,7 +76,7 @@ void updateMatrix1(std::vector<std::vector<int>>& matrix)
 
 void displayGamePattern1()
 {
-    std::vector<std::vector<int>> matrix = readMatrix1FromFile("src/blinkerShip.txt");
+    std::vector<std::vector<int>> matrix = readMatrixPattern1FromFile("src/txt_file/blinkerShip.txt");
 
     while (true) 
     {
@@ -85,9 +85,9 @@ void displayGamePattern1()
             break;
         }
 
-        updateMatrix1(matrix);
+        updateMatrixPattern1(matrix);
 
-        updateMatrix1(matrix);
+        updateMatrixPattern1(matrix);
 
         BeginDrawing();
 

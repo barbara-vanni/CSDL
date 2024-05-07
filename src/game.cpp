@@ -5,9 +5,9 @@
 #include <ctime> 
 #include <fstream>
 #include <sstream>
-#include "grid.hpp"
-#include "button.hpp"
-#include "alive.hpp"
+#include "hpp_file/grid.hpp"
+#include "hpp_file/button.hpp"
+#include "hpp_file/alive.hpp"
 
 
 extern std::vector<std::vector<int>> matrix;
@@ -78,7 +78,7 @@ void updateMatrix(std::vector<std::vector<int>>& matrix)
 
 void displayGame()
 {
-    std::vector<std::vector<int>> matrix = readMatrixFromFile("src/matrix0.txt");
+    std::vector<std::vector<int>> matrix = readMatrixFromFile("src/txt_file/matrix0.txt");
 
     while (true) 
     {
