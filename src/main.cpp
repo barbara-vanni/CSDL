@@ -3,7 +3,8 @@
 enum Screen { MENU, GAME };
 
 void displayMenu();
-void displayGame();
+// void displayGame();
+void displaySelectGame();
 
 
 int main()
@@ -12,7 +13,7 @@ int main()
     const int screenHeight = 1000;
 
     InitWindow(screenWidth, screenHeight, "Le jeu de la vie!");
-    SetTargetFPS(15);
+    SetTargetFPS(60);
 
     Screen currentScreen = MENU;
 
@@ -24,7 +25,9 @@ int main()
         }
         else if (currentScreen == GAME)
         {
-            displayGame();
+            // displayGame();
+            displaySelectGame();
+
         }
 
         if (IsKeyPressed(KEY_ENTER))
