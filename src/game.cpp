@@ -42,6 +42,8 @@ std::vector<std::vector<int>> readMatrixFromFile(const std::string& filename)
     return matrix;
 }
 
+
+
 void updateMatrix(std::vector<std::vector<int>>& matrix)
 {
     
