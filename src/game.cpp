@@ -75,7 +75,7 @@ void updateMatrix(std::vector<std::vector<int>>& matrix)
 
 void displayGame()
 {
-    std::vector<std::vector<int>> matrix = readMatrixFromFile("src/matrix.txt");
+    std::vector<std::vector<int>> matrix = readMatrixFromFile("src/matrix0.txt");
 
     while (true) 
     {
@@ -83,8 +83,6 @@ void displayGame()
         {
             break;
         }
-
-        updateMatrix(matrix);
 
         updateMatrix(matrix);
 
