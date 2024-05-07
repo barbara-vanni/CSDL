@@ -98,18 +98,21 @@ void displayGame()
         // Mettre à jour la matrice avant de dessiner la grille
         updateMatrix(matrix);
 
+        // Mettre à jour la matrice avant de dessiner la grille
+        updateMatrix(matrix);
+
         BeginDrawing();
 
         ClearBackground(BLACK);
 
-        BeginScissorMode(0, 0, GetScreenWidth(), 400);
+        BeginScissorMode(0, 0, GetScreenWidth(), 800);
         drawGrid(matrix);
         EndScissorMode();
 
-        BeginScissorMode(0, 400, GetScreenWidth(), GetScreenHeight() - 400);
+        BeginScissorMode(0, 800, GetScreenWidth(), GetScreenHeight() - 200);
         drawButtons();
         EndScissorMode();
 
-        EndDrawing();
+        EndDrawing(); 
     }
 }

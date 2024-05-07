@@ -8,12 +8,12 @@ void drawCell(int x, int y, int value);
 
 void drawGrid(const std::vector<std::vector<int>>& matrix)
 {
-    for (int i = 0; i < 800; i += 20)
+    for (int i = 0; i < 1200; i += 20)
     {
-        DrawLine(i, 0, i, 800, GRAY);
-        DrawLine(0, i, 800, i, GRAY);
+        DrawLine(i, 0, i, 1200, GRAY);
+        DrawLine(0, i, 1200, i, GRAY);
 
-        for (int j = 0; j < 800; j += 20)
+        for (int j = 0; j < 1200; j += 20)
         {
             if (j / 20 < matrix.size() && i / 20 < matrix[j / 20].size())
             {
@@ -30,6 +30,6 @@ void drawGrid(const std::vector<std::vector<int>>& matrix)
 
 void drawCell(int x, int y, int value)
 {
-    Color color = (value == 1) ? RED : WHITE;
+    Color color = (value == 1) ? RED : BLACK;
     DrawRectangle(x, y, 19, 19, color);
 }
