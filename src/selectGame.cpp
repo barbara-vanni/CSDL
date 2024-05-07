@@ -1,6 +1,8 @@
 #include "raylib.h"
 #include <iostream>
 
+void displayGame();
+
 void displaySelectGame()
 {
     ClearBackground(BLACK);
@@ -32,6 +34,40 @@ void displaySelectGame()
             int textXPos = xPos + (rectWidth - MeasureText(gameText[i], textSize)) / 2;
             int textYPos = yPos + (rectHeight - textSize) / 2;
             DrawText(gameText[i], textXPos, textYPos, textSize, BLACK);
+            if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+            {
+                if (i == 0)
+                {
+                    // Lancer le jeu standard
+                    displayGame();
+                }
+                else if (i == 1)
+                {
+                    // Lancer le jeu aléatoire
+                    displayGame();
+                }
+                else if (i == 2)
+                {
+                    // Continuer le jeu précédent
+                    displayGame();
+                }
+                else if (i == 3)
+                {
+                    // Charger le motif 1
+                    displayGame();
+                }
+                else if (i == 4)
+                {
+                    // Charger le motif 2
+                    displayGame();
+                }
+                else if (i == 5)
+                {
+                    // Charger le motif 3
+                    displayGame();
+                }
+
+            }
         }
         else
         {
