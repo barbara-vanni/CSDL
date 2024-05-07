@@ -1,5 +1,6 @@
 #include "raylib.h"
 #include "game.hpp"
+#include "random.hpp"
 #include "pattern1.hpp"
 #include <iostream>
 
@@ -36,7 +37,7 @@ void displaySelectGame()
                 }
                 else if (i == 1)
                 {
-                    displayGame();
+                    displayRandomGame();
                 }
                 else if (i == 2)
                 {
