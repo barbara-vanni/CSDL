@@ -19,11 +19,6 @@ void drawGrid(const std::vector<std::vector<int>>& matrix)
             {
                 drawCell(i, j, matrix[j / 20][i / 20]);
             }
-            else
-            {
-                // Gérer les cas où les indices sont en dehors des limites de la matrice
-                // Par exemple, ignorer ou afficher un message d'erreur
-            }
         }
     }
 }
