@@ -8,7 +8,7 @@ void displayGame();
 
 int main()
 {
-    const int screenWidth = 1200;
+    const int screenWidth = 1600;
     const int screenHeight = 1000;
 
     InitWindow(screenWidth, screenHeight, "Le jeu de la vie!");
