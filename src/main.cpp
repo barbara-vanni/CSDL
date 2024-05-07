@@ -1,6 +1,5 @@
 #include <raylib.h>
 #include "selectGame.hpp"
-// #include "game.hpp"
 #include "menu.hpp"
 enum Screen { MENU, GAME };
 
@@ -25,7 +24,6 @@ int main()
         }
         else if (currentScreen == GAME)
         {
-            // displayGame();
             displaySelectGame();
 
         }

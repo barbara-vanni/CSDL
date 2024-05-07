@@ -13,7 +13,7 @@
 extern std::vector<std::vector<int>> matrix;
 
 
-std::vector<std::vector<int>> readMatrixFromFile(const std::string& filename)
+std::vector<std::vector<int>> readMatrix1FromFile(const std::string& filename)
 {
     std::ifstream file(filename);
     std::vector<std::vector<int>> matrix;
@@ -42,7 +42,7 @@ std::vector<std::vector<int>> readMatrixFromFile(const std::string& filename)
     return matrix;
 }
 
-void updateMatrix(std::vector<std::vector<int>>& matrix)
+void updateMatrix1(std::vector<std::vector<int>>& matrix)
 {
     
     std::vector<std::vector<int>> newMatrix = matrix;
@@ -74,9 +74,9 @@ void updateMatrix(std::vector<std::vector<int>>& matrix)
     matrix = newMatrix;
 }
 
-void displayGame()
+void displayGamePattern1()
 {
-    std::vector<std::vector<int>> matrix = readMatrixFromFile("src/matrix0.txt");
+    std::vector<std::vector<int>> matrix = readMatrix1FromFile("src/blinkerShip.txt");
 
     while (true) 
     {
@@ -85,9 +85,9 @@ void displayGame()
             break;
         }
 
-        updateMatrix(matrix);
+        updateMatrix1(matrix);
 
-        updateMatrix(matrix);
+        updateMatrix1(matrix);
 
         BeginDrawing();
 
