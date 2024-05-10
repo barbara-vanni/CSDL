@@ -87,8 +87,6 @@ void displayGamePattern1()
 
         updateMatrixPattern1(matrix);
 
-        updateMatrixPattern1(matrix);
-
         BeginDrawing();
 
         ClearBackground(BLACK);
