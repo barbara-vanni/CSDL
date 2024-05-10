@@ -1,6 +1,7 @@
 #include "raylib.h"
 #include "hpp_file/game.hpp"
 #include "hpp_file/random.hpp"
+#include "hpp_file/save.hpp"
 #include "hpp_file/pattern1.hpp"
 #include "hpp_file/pattern2.hpp"
 #include "hpp_file/pattern3.hpp"
@@ -43,7 +44,7 @@ void displaySelectGame()
                 }
                 else if (i == 2)
                 {
-                    displayGame();
+                    displayGameSave();
                 }
                 else if (i == 3)
                 {
