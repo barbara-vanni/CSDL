@@ -76,6 +76,8 @@ void updateMatrix(std::vector<std::vector<int>>& matrix)
     matrix = newMatrix;
 }
 
+
+
 void displayGame()
 {
     std::vector<std::vector<int>> matrix = readMatrixFromFile("src/txt_file/matrix0.txt");

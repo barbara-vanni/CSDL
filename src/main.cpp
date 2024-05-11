@@ -4,7 +4,7 @@
 enum Screen { MENU, GAME };
 
 
-int main()
+int main() 
 {
     const int screenWidth = 1600;
     const int screenHeight = 1000;
