@@ -7,7 +7,7 @@
 #include "hpp_file/pause.hpp"
 #include "hpp_file/eraser.hpp"
 
-
+extern std::vector<std::vector<int>> currentMatrix; 
 void drawInstructions()
 {
     int fontSize = 25; 
@@ -22,17 +22,19 @@ void drawInstructions()
 }
 
 
-void drawButtons()
+void drawButtons(const std::vector<std::vector<int>>& matrix)
 {
     drawInstructions(); 
 
     if (IsKeyPressed(KEY_S))
     {
         std::cout << "Save" << std::endl;
+        
         // displayGameSave();
         // std::vector<std::vector<int>> matrix; 
         // fillMatrix(matrix);
-        fillMatrix();
+        // fillMatrix();
+        copyMatrix(matrix);
         saveMatrixToFile("src/txt_file/save.txt");
     }
     else if (IsKeyPressed(KEY_P))

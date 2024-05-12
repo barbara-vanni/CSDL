@@ -126,7 +126,7 @@ void displayRandomGame()
         EndScissorMode();
 
         BeginScissorMode(0, 800, GetScreenWidth(), GetScreenHeight() - 200);
-        drawButtons();
+        drawButtons(matrix);
         EndScissorMode();
 
         EndDrawing(); 

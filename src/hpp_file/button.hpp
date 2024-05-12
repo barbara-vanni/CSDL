@@ -3,6 +3,6 @@
 #include <raylib.h>
 #include <iostream>
 
-void drawButtons();
+void drawButtons(const std::vector<std::vector<int>>& matrix);
 
 #endif

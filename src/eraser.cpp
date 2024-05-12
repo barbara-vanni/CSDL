@@ -26,6 +26,12 @@ void saveMatrixToFile(const std::string& filename) {
     }
 }
 
+// Ajoutez cette fonction dans votre fichier eraser.cpp
+void copyMatrix(const std::vector<std::vector<int>>& source) {
+    currentMatrix = source;
+}
+
+
 void fillMatrix() {
     currentMatrix.clear();
 
