@@ -5,7 +5,6 @@
 #include <ctime> 
 
 
-
 void drawCell(int x, int y, int value)
 {
     Color color_off_white = {245, 245, 220, 255};

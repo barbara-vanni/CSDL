@@ -2,6 +2,7 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <vector>
 #include "hpp_file/selectGame.hpp"
 #include "hpp_file/pause.hpp"
 #include "hpp_file/eraser.hpp"
@@ -29,7 +30,10 @@ void drawButtons()
     {
         std::cout << "Save" << std::endl;
         // displayGameSave();
-        // writeMatrixToFile("src/txt_file/save.txt", matrix);
+        // std::vector<std::vector<int>> matrix; 
+        // fillMatrix(matrix);
+        fillMatrix();
+        saveMatrixToFile("src/txt_file/save.txt");
     }
     else if (IsKeyPressed(KEY_P))
     {

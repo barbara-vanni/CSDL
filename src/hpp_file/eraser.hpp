@@ -4,7 +4,9 @@
 #include <iostream>
 #include <vector>
 
-extern std::vector<std::vector<int>> matrix;
-void writeMatrixToFile(const std::string& filename, const std::vector<std::vector<int>>& matrix);
 
+    // void fillMatrix(std::vector<std::vector<int>>& matrix);
+    void fillMatrix();
+    void saveMatrixToFile(const std::string& filename);
+    
 #endif
