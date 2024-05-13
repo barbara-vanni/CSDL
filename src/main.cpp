@@ -1,3 +1,6 @@
+//This file is the main file of the project. It is the file that will be executed when the program is launched. It will display the menu and the game.
+//The functions are used to draw the buttons on the screen and the instructions to play the game.
+
 #include <raylib.h>
 #include "hpp_file/selectGame.hpp"
 #include "hpp_file/menu.hpp"

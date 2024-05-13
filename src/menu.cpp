@@ -1,3 +1,7 @@
+//This file contains the function that displays the main menu of the game.
+//The function is called in the main.cpp file.
+//The function is used to display the main menu of the game.
+
 #include "raylib.h"
 #include <iostream>
 

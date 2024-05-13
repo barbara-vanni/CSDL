@@ -1,3 +1,7 @@
+//This file contains the functions to draw the grid and the cells of the grid
+//The functions are used to draw the grid and the cells of the grid
+//This file contains the functions to draw the grid and the cells of the grid
+
 #include "raylib.h"
 #include <iostream>
 #include <vector> 
