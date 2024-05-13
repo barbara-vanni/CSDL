@@ -1,3 +1,7 @@
+//This file is used to save the matrix in a file and to copy the matrix in a vector
+//The functions are called in the button.cpp file.
+//The functions are used to save the matrix in a file and to copy the matrix in a vector
+
 #include "raylib.h"
 #include <iostream>
 #include <fstream> 
@@ -26,7 +30,6 @@ void saveMatrixToFile(const std::string& filename) {
     }
 }
 
-// Ajoutez cette fonction dans votre fichier eraser.cpp
 void copyMatrix(const std::vector<std::vector<int>>& source) {
     currentMatrix = source;
 }
@@ -39,20 +42,4 @@ void fillMatrix() {
         std::vector<int> row(80, 0); 
         currentMatrix.push_back(row);
     }
-}  
-
-// void fillMatrix(std::vector<std::vector<int>>& matrix) {
-//     // Initialiser la graine pour la génération de nombres aléatoires
-//     std::srand(std::time(nullptr));
-
-//     int numRows = matrix.size();
-//     int numCols = matrix[0].size();
-
-//     // Parcourir chaque cellule de la matrice
-//     for (int i = 0; i < numRows; ++i) {
-//         for (int j = 0; j < numCols; ++j) {
-//             // Utiliser le résultat de alive pour déterminer l'état initial de la cellule
-//             matrix[i][j] = std::rand() % 2; // Choix aléatoire entre 0 et 1 pour la cellule
-//         }
-//     }
-// }
+}

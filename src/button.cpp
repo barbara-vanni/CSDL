@@ -1,3 +1,7 @@
+//This file contains the functions that are used to draw the buttons on the screen and the instructions to play the game.
+//The functions are called in the game.cpp file.
+//The functions are used to draw the buttons on the screen and the instructions to play the game.
+
 #include "raylib.h"
 #include <iostream>
 #include <chrono>
@@ -29,11 +33,6 @@ void drawButtons(const std::vector<std::vector<int>>& matrix)
     if (IsKeyPressed(KEY_S))
     {
         std::cout << "Save" << std::endl;
-        
-        // displayGameSave();
-        // std::vector<std::vector<int>> matrix; 
-        // fillMatrix(matrix);
-        // fillMatrix();
         copyMatrix(matrix);
         saveMatrixToFile("src/txt_file/save.txt");
     }

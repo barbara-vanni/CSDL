@@ -1,3 +1,7 @@
+//This file contains the functions that are used to draw the buttons on the screen and the instructions to play the game.
+//The functions are used to draw the buttons on the screen and the instructions to play the game.
+
+
 #include "raylib.h"
 #include <iostream>
 #include <vector> 
