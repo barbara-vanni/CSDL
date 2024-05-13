@@ -9,6 +9,7 @@
 #include "hpp_file/button.hpp"
 #include "hpp_file/alive.hpp"
 
+// Read and update matrix from pattern1 file and return it, display the game pattern1
 
 extern std::vector<std::vector<int>> matrix;
 

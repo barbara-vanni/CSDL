@@ -10,6 +10,9 @@
 #include "hpp_file/alive.hpp"
 
 
+// Save the game state to a file and display the game
+
+
 extern std::vector<std::vector<int>> matrix;
 
 

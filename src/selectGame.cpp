@@ -7,6 +7,8 @@
 #include "hpp_file/pattern3.hpp"
 #include <iostream>
 
+// Display the select game screen where we can choose wich file to play
+
 
 void displaySelectGame()
 {

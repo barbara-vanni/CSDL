@@ -10,6 +10,8 @@
 #include "hpp_file/alive.hpp"
 
 
+// Randommisation of the alive cell // Read and update matrix from the random pattern file and return it, display the game 
+
 extern std::vector<std::vector<int>> matrix;
 
 
